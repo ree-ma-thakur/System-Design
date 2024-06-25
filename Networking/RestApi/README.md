@@ -1,0 +1,3 @@
+- npm init -> to create npm package
+- npm i express --save
+- Add : "type": "module", in package.json to use normal module imports instead of require
