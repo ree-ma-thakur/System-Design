@@ -1,3 +1,8 @@
 - npm init -> to create npm package
 - npm i express --save
 - Add : "type": "module", in package.json to use normal module imports instead of require
+- npm i nodemon --save : keep on tracking our changes & automatically keep on running the application
+- "start" :"nodemon ./index.js", add this to package.json
+- Any data either we send or get back, all data goes in format of serialized data(as form of JSON.stringify)
+- in expressjs to pass the serilized data we use bodyparser
+- npm i body-parser --save

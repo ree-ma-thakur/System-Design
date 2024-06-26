@@ -3,6 +3,7 @@ import bodyParser from "body-parser";
 
 const app = express();
 
+// used bodyparser as middleware
 app.use(bodyParser.json());
 
 // all is for any type of request
@@ -25,6 +26,7 @@ const todos = [
   },
 ];
 
+// CRUD Operations
 // READ
 app.get("/todos", (req, res) => {
   res.json(todos);
@@ -34,7 +36,7 @@ app.get("/todos", (req, res) => {
 app.post("/todos", (req, res) => {
   const newTodo = req.body;
   todos.push(newTodo);
-  res.status(201).json({
+  res.json({
     message: "New Todo Added!",
   });
 });
@@ -54,7 +56,7 @@ app.put("/todos/:id", (req, res) => {
       message: "Todo updated successfully!",
     });
   } else {
-    res.status(400).json({
+    res.json({
       message: "Todo Id does not exist!",
     });
   }
